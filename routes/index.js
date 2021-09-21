@@ -1,8 +1,6 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
-    console.log(req.ip);
-    console.log(req.socket.remoteAddress);
+router.get('/api/whoami', (req, res) => {
     let obj = {
         language: req.headers["accept-language"],
         software: req.headers["user-agent"],
