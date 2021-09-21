@@ -3,13 +3,10 @@ const routes = require('./routes');
 
 const app = express();
 
-app.use(express.json());   //Body parser
-
 app.use(routes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
-// server Create
-const server = app.listen(PORT , () =>{
+app.listen(PORT , () =>{
   console.log(`Server Running On ${PORT}`);
 });
