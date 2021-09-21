@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
     let obj = {
         language: req.headers["accept-language"],
         software: req.headers["user-agent"],
-        ipAddress: req.ip,
+        ipAddress: req.ip.replace("::ffff:", ""),
     };
 
     res.json(obj);
