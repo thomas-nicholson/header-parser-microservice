@@ -6,10 +6,10 @@ router.get('/', (req, res) => {
     let obj = {
         language: req.headers["accept-language"],
         software: req.headers["user-agent"],
-        ipAddress: 1,
+        ipAddress: req.ip,
     };
 
-    res.json(req.headers);
+    res.json(obj);
 });
 
 module.exports = router;
